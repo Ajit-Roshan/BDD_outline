@@ -1,6 +1,8 @@
 Feature: 
-   basic
+   basic search
 
+
+  @search
   Scenario: 
     google search
 
@@ -8,3 +10,21 @@ Feature:
     And enter the search data
     When user hit enter
     Then user is redirect to search result page
+
+  @demo_login
+  Scenario: 
+    demo login test
+
+    Given user on demo login page
+    And enter the user id and password
+    When user click on login
+    Then user shuld get loggedIN
+
+  @orange_hrm
+  Scenario: 
+    orange HRM
+
+    Given user should be on ornage hrm home page 
+    When user input ligin ID and Password
+    And click on ligin
+    Then user should be login page
