@@ -13,11 +13,14 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/Features"},
 		glue = {"stepDefinations"},
-		plugin = {"pretty" , "html:target/Report" , "junit:target/junitReport.xml"  },
+		plugin = {"pretty" , "html:target/Report"},
 		monochrome = false ,
-		dryRun = false
+		dryRun = false,
+		publish = true,
+		tags = "@search"
+		
 		)
 
 public class ExecutorTest {
-
+	
 }
