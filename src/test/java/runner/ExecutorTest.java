@@ -13,9 +13,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/Features"},
 		glue = {"stepDefinations"},
-		tags = "@orange_hrm or @demo_login",
-		plugin = {"pretty" , "html:target/Report"},
-		monochrome = false
+		plugin = {"pretty" , "html:target/Report" , "junit:target/junitReport.xml"  },
+		monochrome = false ,
+		dryRun = false
 		)
 
 public class ExecutorTest {

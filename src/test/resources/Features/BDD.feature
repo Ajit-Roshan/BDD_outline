@@ -1,6 +1,21 @@
 Feature: 
    basic search
 
+  #	Background:
+  #	Given backgroung running given
+  
+  @data_driven
+  Scenario Outline: data driven test
+    Given we open the link
+    When data entered  <login> and <passcrad>
+    And hit enter
+    Then for valid login Crad we get logged in
+
+    Examples: 
+      |login|passcrad|
+      |"ajit"|"ajit123"|
+      |"roshan"|"roshan123"|
+      |"soy"|"soy123"|
 
   @search
   Scenario: 
@@ -24,7 +39,7 @@ Feature:
   Scenario: 
     orange HRM
 
-    Given user should be on ornage hrm home page 
+    Given user should be on ornage hrm home page
     When user input ligin ID and Password
     And click on ligin
     Then user should be login page

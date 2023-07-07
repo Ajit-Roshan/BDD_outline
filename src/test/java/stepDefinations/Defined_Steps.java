@@ -1,5 +1,6 @@
 package stepDefinations;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -7,6 +8,27 @@ import io.cucumber.java.en.When;
 
 public class Defined_Steps {
 
+//	@Given("backgroung running given")
+//	public void backgroung_running_given() {
+//		System.out.println("background given");
+//	}
+	
+
+//  before step execute before each step in the feature file 	
+//	@BeforeStep
+//	public void beforeStep() {
+//		System.out.println("this is beforeStep form cucumber io");
+//	}
+	
+	
+// before run once before the execution of scenario
+	@Before(value = "@demo_login")
+	public void before(){
+		System.out.println("this is before from cucumber io");
+	}
+	
+	
+	
 	@Given("user on search page")
 	public void user_on_search_page() {
 		System.out.println("google search given");
@@ -71,5 +93,6 @@ public class Defined_Steps {
 		System.out.println("ornage then");
 	}
 
-
+////
+		
 }
